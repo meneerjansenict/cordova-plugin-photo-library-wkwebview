@@ -64,8 +64,8 @@ public class PhotoLibrary extends CordovaPlugin {
               final double chunkTimeSec = options.getDouble("chunkTimeSec");
               final boolean includeAlbumData = options.getBoolean("includeAlbumData");
 
-              Log.i("67 get lib ", Boolean.toString(cordova.hasPermission(READ_EXTERNAL_STORAGE)));
-              Log.i("67 get lib ", Boolean.toString(cordova.hasPermission(WRITE_EXTERNAL_STORAGE));
+              Log.i("67 get lib ", String.valueOf(cordova.hasPermission(READ_EXTERNAL_STORAGE)));
+              Log.i("67 get lib ", String.valueOf(cordova.hasPermission(WRITE_EXTERNAL_STORAGE));
               if (!cordova.hasPermission(READ_EXTERNAL_STORAGE)) {
                 callbackContext.error(service.PERMISSION_ERROR);
                 return;
@@ -103,8 +103,8 @@ public class PhotoLibrary extends CordovaPlugin {
           public void run() {
             try {
 
-              Log.i("67 get albums ", Boolean.toString(cordova.hasPermission(READ_EXTERNAL_STORAGE)));
-              Log.i("67 get albums ", Boolean.toString(cordova.hasPermission(WRITE_EXTERNAL_STORAGE)));
+              Log.i("67 get albums ", String.valueOf(cordova.hasPermission(READ_EXTERNAL_STORAGE)));
+              Log.i("67 get albums ", String.valueOf(cordova.hasPermission(WRITE_EXTERNAL_STORAGE)));
 
               if (!cordova.hasPermission(READ_EXTERNAL_STORAGE)) {
                 callbackContext.error(service.PERMISSION_ERROR);
@@ -134,8 +134,8 @@ public class PhotoLibrary extends CordovaPlugin {
               final int thumbnailHeight = options.getInt("thumbnailHeight");
               final double quality = options.getDouble("quality");
 
-              Log.i("67 get thumb ", Boolean.toString(cordova.hasPermission(READ_EXTERNAL_STORAGE)));
-              Log.i("67 get thumb ", Boolean.toString(cordova.hasPermission(WRITE_EXTERNAL_STORAGE)));
+              Log.i("67 get thumb ", String.valueOf(cordova.hasPermission(READ_EXTERNAL_STORAGE)));
+              Log.i("67 get thumb ", String.valueOf(cordova.hasPermission(WRITE_EXTERNAL_STORAGE)));
 
               if (!cordova.hasPermission(READ_EXTERNAL_STORAGE)) {
                 callbackContext.error(service.PERMISSION_ERROR);
@@ -161,8 +161,8 @@ public class PhotoLibrary extends CordovaPlugin {
 
               final String photoId = args.getString(0);
 
-              Log.i("67 get phpto ", Boolean.toString(cordova.hasPermission(READ_EXTERNAL_STORAGE)));
-              Log.i("67 get photo ", Boolean.toString(cordova.hasPermission(WRITE_EXTERNAL_STORAGE)));
+              Log.i("67 get phpto ", String.valueOf(cordova.hasPermission(READ_EXTERNAL_STORAGE)));
+              Log.i("67 get photo ", String.valueOf(cordova.hasPermission(WRITE_EXTERNAL_STORAGE)));
 
               if (!cordova.hasPermission(READ_EXTERNAL_STORAGE)) {
                 callbackContext.error(service.PERMISSION_ERROR);
@@ -396,8 +396,8 @@ public class PhotoLibrary extends CordovaPlugin {
     List<String> permissions = new ArrayList<String>();
 
 
-      Log.i("requestAuthorization R: ", Boolean.toString(read));
-      Log.i("requestAuthorization W:  ", Boolean.toString(write));
+      Log.i("requestAuthorization R: ", String.valueOf(read));
+      Log.i("requestAuthorization W:  ", String.valueOf(write));
     if (read) {
       permissions.add(READ_EXTERNAL_STORAGE);
     }
