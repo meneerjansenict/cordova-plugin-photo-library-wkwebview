@@ -65,7 +65,7 @@ public class PhotoLibrary extends CordovaPlugin {
               final boolean includeAlbumData = options.getBoolean("includeAlbumData");
 
               Log.i("67 get lib ", String.valueOf(cordova.hasPermission(READ_EXTERNAL_STORAGE)));
-              Log.i("67 get lib ", String.valueOf(cordova.hasPermission(WRITE_EXTERNAL_STORAGE));
+              Log.i("67 get lib ", String.valueOf(cordova.hasPermission(WRITE_EXTERNAL_STORAGE)));
               if (!cordova.hasPermission(READ_EXTERNAL_STORAGE)) {
                 callbackContext.error(service.PERMISSION_ERROR);
                 return;
@@ -193,8 +193,8 @@ public class PhotoLibrary extends CordovaPlugin {
           final boolean read = options.getBoolean("read");
           final boolean write = options.getBoolean("write");
 
-            Log.i("req get auth ", cordova.hasPermission(READ_EXTERNAL_STORAGE));
-            Log.i("req get auth W: ", cordova.hasPermission(WRITE_EXTERNAL_STORAGE));
+            Log.i("req get auth ", String.valueOf(cordova.hasPermission(READ_EXTERNAL_STORAGE)));
+            Log.i("req get auth W: ", String.valueOf(cordova.hasPermission(WRITE_EXTERNAL_STORAGE)));
 
           if (read && !cordova.hasPermission(READ_EXTERNAL_STORAGE)
             || write && !cordova.hasPermission(WRITE_EXTERNAL_STORAGE)) {
@@ -408,8 +408,8 @@ public class PhotoLibrary extends CordovaPlugin {
 
     cordova.requestPermissions(this, REQUEST_AUTHORIZATION_REQ_CODE, permissions.toArray(new String[0]));
 
-    Log.i("Added permissions: now read: ", cordova.hasPermission(READ_EXTERNAL_STORAGE));
-    Log.i("Added permissions: now read: ", cordova.hasPermission(WRITE_EXTERNAL_STORAGE));
+    Log.i("Added permissions: now read: ", String.valueOf(cordova.hasPermission(READ_EXTERNAL_STORAGE)));
+    Log.i("Added permissions: now read: ", String.valueOf(cordova.hasPermission(WRITE_EXTERNAL_STORAGE)));
   }
 
   private static JSONArray createGetAlbumsResult(ArrayList<JSONObject> albums) throws JSONException {
